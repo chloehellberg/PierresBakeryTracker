@@ -13,16 +13,16 @@ _This application is for a fictional bakery and includes the following functiona
 
 _Functionality for the Models are also tested._
 
-## Specs
+## Specs for Testing
 | Spec | Input | Output |
 | :---------------------------- | :------------- | :------------ |
-<!-- | 1. Create two classes: Bread and Pastry. | Item Amount | Cost of Each |
+| 1. Create two classes: Bread and Pastry. | Item Amount | Cost of Each |
 | 2. ~~Build Database of Item and corresponding price for each.~~ | ~~Info~~ | ~~Database~~
 | 3. Build out CalculateBread Method with initial costs for Bread. | int Bread: 1 | int Cost: $5
 | 4. Add functionality in CalculatePastry Method for initial cost of Pastry. | int Pastry: 1 | int Cost $2
 | 5. Add logic for Pierre's deals for Bread. Buy 2, get 1 free. | int Bread: 3 | int Cost: $10
 | 6. Add logic for Pierre's deals for Pastry. Buy 3 for $5. | int Pastry: 3 | int Cost: $5
-| 7. Add additional UI for other fun options. | 1 Rye & 1 Sourdough | Cost: $10 -->
+| 7. Add additional UI for other fun options. | 1 Rye & 1 Sourdough | Cost: $10
 
 
 ## Setup/Installation Requirements
