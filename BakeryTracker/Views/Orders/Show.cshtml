@@ -4,9 +4,9 @@
 <ul>
   <li>Description: @Model["order"].Description</li>
   <li>Amount Requested: @Model["order"].Amount</li>
-  <li>Price Per: @Model["order"].Price</li>
+  <li>Price Per Order: $@Model["order"].Price</li>
   <li>Date Needed: @Model["order"].Date</li>
-  <li>Cost of Order: $@Model["order"]</li>
+  <li>Cost of Order: $@Model["order"].GetCost()</li>
 </ul>
 <h3>Vendor: @Model["vendor"].Name</h3>
 
