@@ -10,6 +10,11 @@
   @foreach (Order order in Model)
   {
     <li><a href='/orders/@order.Id'>@order.Title</a></li>
+    @* <ul>
+      <li>@order.Description</li>
+      <li>@order.Price</li>
+      <li>@order.Date</li>
+    </ul> *@
   }
 
 </ul>
