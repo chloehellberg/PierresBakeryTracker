@@ -11,18 +11,15 @@ _This application is for a fictional bakery and includes the following functiona
   * Each Vendor has it's own page and the user can add new Orders to it to help keep track of what is typically supplied to that Vendor
   * The Order form includes properties for the title, description, the price, and the date of the orders
 
-_Functionality for the Models are also tested._
 
 ## Specs for Testing
 | Spec | Input | Output |
 | :---------------------------- | :------------- | :------------ |
-| 1. Create two classes: Bread and Pastry. | Item Amount | Cost of Each |
-| 2. ~~Build Database of Item and corresponding price for each.~~ | ~~Info~~ | ~~Database~~
-| 3. Build out CalculateBread Method with initial costs for Bread. | int Bread: 1 | int Cost: $5
-| 4. Add functionality in CalculatePastry Method for initial cost of Pastry. | int Pastry: 1 | int Cost $2
-| 5. Add logic for Pierre's deals for Bread. Buy 2, get 1 free. | int Bread: 3 | int Cost: $10
-| 6. Add logic for Pierre's deals for Pastry. Buy 3 for $5. | int Pastry: 3 | int Cost: $5
-| 7. Add additional UI for other fun options. | 1 Rye & 1 Sourdough | Cost: $10
+| 1. Order Test: Return Correct Order Id Number | 2 | newOrder2 |
+| 2. Order Test: Calculate Cost Method | amount: 30, price: $2 | $60
+| 3. Vendor Test: Determine if orders are being associated w/each vendor | newOrder & newVendor | newList newVendor w/order
+
+
 
 
 ## Setup/Installation Requirements

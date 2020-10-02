@@ -44,11 +44,11 @@ namespace BakeryTracker.Controllers
     {
       int orderPrice = int.Parse(stringPrice);
       int orderAmount = int.Parse(stringAmount);
-      Dictionary<string, object> model = new Dictionary<string, object>();    //This is displaying a new dictionary (model)
-      Vendor foundVendor = Vendor.Find(vendorId);                             //Finding vendor ID to attach to Vendor List
-      Order newOrder = new Order(orderTitle, orderDescription, orderAmount, orderPrice, orderDate); //start newOrder with inputs
-      int orderCost = newOrder.GetCost();                   //Calls the GetCost method and saves it in a variable
-      foundVendor.AddOrder(newOrder);                       //Adds the order from new order
+      Dictionary<string, object> model = new Dictionary<string, object>();    
+      Vendor foundVendor = Vendor.Find(vendorId);                             
+      Order newOrder = new Order(orderTitle, orderDescription, orderAmount, orderPrice, orderDate); 
+      int orderCost = newOrder.GetCost();                   
+      foundVendor.AddOrder(newOrder);                       
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
