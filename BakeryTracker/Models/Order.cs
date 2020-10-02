@@ -9,7 +9,6 @@ namespace BakeryTracker.Models
     public string Description { get; set; }
     public int Amount { get; set; }
     public int Price { get; set; }
-    // public int Cost { set; }                //Should this be get; set;?
     public string Date { get; set; }
     // private static List<Order> _instances = new List<Order> { };
     public static List<Order> _instances = new List<Order> { };
@@ -21,7 +20,6 @@ namespace BakeryTracker.Models
       Amount = orderAmount;
       Price = orderPrice;
       Date = orderDate;
-      // Cost = orderCost;
       _instances.Add(this);
       Id = _instances.Count;
     }
@@ -41,9 +39,10 @@ namespace BakeryTracker.Models
       return _instances[searchId-1];
     }
 
-    // public int GetCost(int orderPrice)
-    // {
-    //   int totalOrderCost = 
-    // }
+    public int GetCost()
+    {
+      int totalCost = Amount * Price;
+      return totalCost;
+    }
   }
 }
