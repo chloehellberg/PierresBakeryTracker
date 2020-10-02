@@ -6,6 +6,7 @@ namespace BakeryTracker.Models
   {
     public string Title { get; set; }
     public int Id { get; }
+    // public int Cost { get; }
     public string Description { get; set; }
     public int Amount { get; set; }
     public int Price { get; set; }
