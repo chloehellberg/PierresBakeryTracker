@@ -33,5 +33,17 @@ namespace BakeryTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void TestConstructor_ReturnsConstructor_Vendor()
+    {
+      string vendorName = "Suzie's Diner";
+      string vendorDescription = "fluffy";
+
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+
+      Assert.AreEqual(newVendor.Name, vendorName);
+      Assert.AreEqual(newVendor.Description, vendorDescription);   
+    } 
   }
 }
