@@ -59,5 +59,20 @@ namespace BakeryTracker.Tests
 
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string vendorName01 = "Suzie's Diner";
+      string vendorDescription01 = "344 NE Alberta";
+      string vendorName02 = "Bob's Burgers";
+      string vendorDescription02 = "1300 NE Dekum";
+      Vendor newVendor01 = new Vendor(vendorName01, vendorDescription01);
+      Vendor newVendor02 = new Vendor(vendorName02, vendorDescription02);
+
+      Vendor result = Vendor.Find(2);
+
+      Assert.AreEqual(newVendor02, result);
+    }
   }
 }
