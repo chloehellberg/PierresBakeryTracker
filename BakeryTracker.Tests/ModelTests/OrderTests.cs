@@ -94,6 +94,21 @@ namespace BakeryTracker.Tests
       Assert.AreEqual(newOrder.Price, price);
       Assert.AreEqual(newOrder.Date, date);   
     }   
+
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+       string title = "Dinner Rolls";
+      string description = "fluffy";
+      int amount = 1;
+      int price = 5;
+      string date = "June 5th";
+      Order newOrder = new Order(title, description, amount, price, date);
+
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
+    }
   }
 }
 
