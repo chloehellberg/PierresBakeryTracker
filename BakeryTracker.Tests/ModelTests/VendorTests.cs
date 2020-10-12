@@ -11,6 +11,7 @@ namespace BakeryTracker.Tests
     public void Dispose()
     {
       Order.ClearAll();
+      Vendor.ClearAll();
     }
 
     [TestMethod]
@@ -38,12 +39,25 @@ namespace BakeryTracker.Tests
     public void TestConstructor_ReturnsConstructor_Vendor()
     {
       string vendorName = "Suzie's Diner";
-      string vendorDescription = "fluffy";
+      string vendorDescription = "344 NE Alberta";
 
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
 
       Assert.AreEqual(newVendor.Name, vendorName);
       Assert.AreEqual(newVendor.Description, vendorDescription);   
     } 
+
+    
+    [TestMethod]
+    public void GetId_VendorsInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string vendorName = "Suzie's Diner";
+      string vendorDescription = "344 NE Alberta";
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+
+      int result = newVendor.Id;
+
+      Assert.AreEqual(1, result);
+    }
   }
 }
