@@ -59,7 +59,7 @@ namespace BakeryTracker.Tests
     [TestMethod]
     public void GetAll_ReturnOrders_OrderList()
     {
-       string title01 = "Dinner Rolls";
+      string title01 = "Dinner Rolls";
       string title02 = "Croissants";
       string description01 = "fluffy";
       string description02 = "toasted";
@@ -76,6 +76,24 @@ namespace BakeryTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void TestConstructor_ReturnsConstructor_Order()
+    {
+      string title = "Dinner Rolls";
+      string description = "fluffy";
+      int amount = 1;
+      int price = 5;
+      string date = "June 5th";
+
+      Order newOrder = new Order(title, description, amount, price, date);
+
+      Assert.AreEqual(newOrder.Title, title);
+      Assert.AreEqual(newOrder.Description, description);
+      Assert.AreEqual(newOrder.Amount, amount);
+      Assert.AreEqual(newOrder.Price, price);
+      Assert.AreEqual(newOrder.Date, date);   
+    }   
   }
 }
 
