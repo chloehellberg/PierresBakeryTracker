@@ -84,5 +84,23 @@ namespace BakeryTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+
+    [TestMethod]
+    public void GetAll_ReturnVendors_VendorList()
+    {
+      string vendorName01 = "Suzie's Diner";
+      string vendorDescription01 = "344 NE Alberta";
+      string vendorName02 = "Bob's Burgers";
+      string vendorDescription02 = "1300 NE Dekum";
+      Vendor newVendor01 = new Vendor(vendorName01, vendorDescription01);
+      Vendor newVendor02 = new Vendor(vendorName02, vendorDescription02);
+     
+      List<Vendor> newList = new List<Vendor> { newVendor01, newVendor02 };
+
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
